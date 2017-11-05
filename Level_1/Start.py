@@ -62,11 +62,25 @@ for i in dic:
 #Functions 
 ############################################
 def add(a,b):
+    """Adding two numbers.
+    Args:
+        a:first input 
+        b:second input
+    Returns:
+        The result of a+b 
+    """
     print a+b
 
 add(5,4)
 
 def mult(a,b):
+    """Multiplication two numbers.
+    Args:
+        a:first input 
+        b:second input
+    Returns:
+        The result of a*b 
+    """
     if a==0:
         print "mult by zero "
         return
