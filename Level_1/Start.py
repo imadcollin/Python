@@ -54,3 +54,42 @@ print dic
 for i in dic:
     print 'i=' , i 
 
+##Print keyz and values 
+for i in dic:
+    print i, dic[i]
+
+############################################
+#Functions 
+############################################
+def add(a,b):
+    print a+b
+
+add(5,4)
+
+def mult(a,b):
+    if a==0:
+        print "mult by zero "
+        return
+    print a*b
+
+print mult(3,5)
+
+##Function call function 
+newList=[]
+def addToList(a):
+    newList.append(a)
+    return newList
+
+def print_list(l):
+    for i in l:
+        print 'list elements', i 
+
+addToList(5)
+addToList(3)
+addToList(1)
+print_list(newList)
+
+##Passing argument for terminal 
+import sys 
+param=sys.argv[1]
+print "You pass the following from terminal:" , param 
