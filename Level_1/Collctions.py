@@ -36,3 +36,37 @@ str3="this is {0} and {1}".format("Me","You")
 print str3
 
 
+#Range
+for i in range(10): 
+    print i
+
+
+##Rang start stop stop
+for i in range(10,20,2):
+    print i  ## i ++2 
+
+#################################################
+#List
+#################################################
+
+x="there are some birds over there".split()
+print x
+print x[2]
+print x[1]
+
+
+y=[[1,2,3,4]]*3
+print y 
+
+
+list=[range(1,10)]*3
+print list
+
+
+rev=["ttt","wwww","ggff"]
+print rev
+rev.sort()
+print rev
+rev.reverse()
+print rev
+
