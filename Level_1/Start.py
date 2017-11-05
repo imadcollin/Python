@@ -24,3 +24,33 @@ if x<10:
 elif x==10:
     print "equal"
     
+#For statment
+myList=[1,2,3,4]
+print myList # OK! 
+
+for i in myList:
+    print 'i=' , i  ## Ops!!
+
+#While statment 
+while True: 
+    if myList.count(1)==2:
+        print "Count(1) detected"
+        break
+    print "Nothing to show "
+    break
+
+#String 
+str= "This is a string!"
+print str
+
+##string concat 
+str2= " String 2 "
+print str+str2
+
+#Dictionalry 
+dic={1:"one",2:"two"}
+print dic    
+
+for i in dic:
+    print 'i=' , i 
+
