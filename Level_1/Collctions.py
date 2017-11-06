@@ -70,3 +70,26 @@ print rev
 rev.reverse()
 print rev
 
+#################################################
+#Dictionary 
+#################################################
+
+##Tuples to dictionary 
+tup=[(1,"one"),(2,"two")]
+dic=dict(tup)
+print dic
+
+#Printing values 
+for value in dic.values():
+    print value
+
+
+#################################################
+#Set 
+#################################################
+
+s=set([2,4,5,6,7])
+print s
+print type(s)
+for i in s:
+    print "i is {}",format(i) 
