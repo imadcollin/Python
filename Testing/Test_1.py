@@ -18,6 +18,11 @@ class StringTest(unittest.TestCase):
     def test_runner(self):
         stringCheck()
 
+## Add pass function 
+def stringCheck():
+    pass
+
+
 # Main 
 if __name__=="__main__":
     unittest.main()
