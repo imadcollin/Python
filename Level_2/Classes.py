@@ -57,3 +57,33 @@ class C4:
 
 test=C4("Bob",33, "ALEPPO")
 print "details:{}\t{}\t{} ".format(test.get_age(),test.get_name(),test.get_city())
+
+
+
+#################################################
+##Using class as new type 
+#################################################
+class School:
+    def __init__(self,name,numberOfStudents,teachers):
+        self._name=name
+        self._numberOfStudents=numberOfStudents
+        self._teachers=teachers
+
+    def show(self):
+        print "School: {}  \t students: {} \t teacher salary: {}".format(self._name ,
+        self._numberOfStudents,
+        self._teachers.salary())
+
+
+class Teachers:
+    def __init__(self,tName,tCity):
+        self._name=tName
+        self._tCity=tCity
+
+    def salary(self):
+        return 200
+
+
+t=Teachers("Mano","Dams")
+s=School("Uppsala",500,t)
+s.show()
