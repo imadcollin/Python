@@ -24,3 +24,18 @@ class C2:
 test=C2(100)
 print test.get_num()
 
+
+
+#Example
+class C3:
+    def __init__(self,str):
+        if not str[:2].isalpha():
+            raise ValueError("is alpha")
+
+        self._str=str
+
+    def get_str(self):
+        return self._str
+    
+test=C3("string")
+print test.get_str()
