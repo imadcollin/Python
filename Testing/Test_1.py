@@ -14,7 +14,8 @@ import unittest
 
  ## Add pass function 
 def stringCheck(str):
-    pass
+   # pass
+   return len(str)
 
 class StringTest(unittest.TestCase):
     """Test for string length"""
@@ -34,7 +35,8 @@ class StringTest(unittest.TestCase):
     def test_runner(self):
          stringCheck(self.str)
 
-   
+    def test_string_length(self):
+       self.assertEqual(stringCheck("four"),4)
     
 # Main 
 if __name__=="__main__":
