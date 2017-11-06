@@ -39,3 +39,21 @@ class C3:
     
 test=C3("string")
 print test.get_str()
+
+
+##More initializers 
+class C4:
+    def __init__(self,name,age,city):
+        self._name=name
+        self._age=age
+        self._city=city
+
+    def get_name(self):
+        return self._name
+    def get_age(self):
+        return self._age
+    def get_city(self):
+        return self._city
+
+test=C4("Bob",33, "ALEPPO")
+print "details:{}\t{}\t{} ".format(test.get_age(),test.get_name(),test.get_city())
