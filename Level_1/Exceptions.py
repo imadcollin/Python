@@ -39,3 +39,34 @@ test=decrement(10)
 print test
 test=decrement([1,2,3,4])
 print test
+
+
+#################################################
+#Using SYS error exceptions  
+#################################################
+import sys
+def detect(x):
+    """Detecting errors from sys lib  """
+    try:
+        return int(x)
+    except(ValueError,TypeError) as e:
+        print "failed:{}".format(str(e))
+    return -1
+test=detect(4)
+print test
+test=detect("hhhhh")
+
+
+##Division by Zero 
+def divide(x,y):
+    try:
+        a=int(x)
+        b=int(y)
+        return a/b
+    except ZeroDivisionError:
+        return "Not allow ro divide by zero"
+    return -1
+test=divide(10,5)
+print test
+test=divide(10,0)
+print test
