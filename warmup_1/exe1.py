@@ -116,3 +116,39 @@ assert missing_char('kitten', 4) =='kittn'
 assert missing_char_2('kitten', 1) == 'ktten'
 assert missing_char_2('kitten', 0) == 'itten'
 assert missing_char_2('kitten', 4) =='kittn'
+
+
+def front_back(str):
+    if(len(str) ==1): 
+        return str; 
+    x = str[:1]
+    y= str[len(str)-1:]
+    z= str[1:len(str)-1]; 
+    return y+z+x
+
+
+assert front_back('code') =='eodc'
+assert front_back('a') =='a'
+assert front_back('ab') == 'ba'
+
+def front_back_2(str):
+    if(len(str) <=1):
+        return str; 
+    return  str[:1] + str[1:-1] + str[0]
+
+
+assert front_back('code') =='eodc'
+assert front_back('a') =='a'
+assert front_back('ab') == 'ba'
+
+
+def front3(str):
+    temp= str[:3]
+    x= ""
+    for i in range (3): 
+        x= x+temp; 
+    return x; 
+
+assert front3('Java') == 'JavJavJav'
+assert front3('Chocolate') == 'ChoChoCho'
+assert front3('abc') == 'abcabcabc'
