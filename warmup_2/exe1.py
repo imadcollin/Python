@@ -54,3 +54,30 @@ def string_splosion_2(str):
 assert string_splosion_2('Code') == 'CCoCodCode'
 assert string_splosion_2('abc') == 'aababc'
 assert string_splosion_2('ab') =='aab'
+
+
+def array_count9(nums):
+    x= 0 ; 
+    for i in nums: 
+        if (i == 9):
+            x=x+1;
+    return x 
+
+assert array_count9([1, 2, 9]) == 1
+assert array_count9([1, 9, 9]) == 2
+assert array_count9([1, 9, 9, 3, 9]) == 3
+
+
+def array_front9(nums):
+    l = len(nums)
+    if l> 4: 
+        l = 4; 
+    for i in range(l): 
+        if nums[i] ==9:
+            return True
+    return False
+
+
+assert array_front9([1, 2, 9, 3, 4]) == True
+assert array_front9([1, 2, 3, 4, 9]) == False
+assert array_front9([1, 2, 3, 4, 5]) ==False
