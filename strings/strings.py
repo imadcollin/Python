@@ -54,3 +54,34 @@ def extra_end_2(str):
 assert extra_end_2('Hello') == 'lololo'
 assert extra_end_2('ab') == 'ababab'
 assert extra_end_2('Hi') =='HiHiHi'
+
+
+def first_two(str):
+    if(len(str) >= 2):
+        return str[:2]
+    else: 
+        return str
+
+assert first_two('Hello') == 'He'
+assert first_two('abcdefg') =='ab'
+assert first_two('ab') =='ab'
+
+def first_half(str):
+    if(len(str)>1):
+        mid= len(str)/2
+        return str[:int(mid)]
+    else:
+        return str
+
+
+assert first_half('WooHoo') == 'Woo'
+assert first_half('HelloThere') == 'Hello'
+assert first_half('abcdef') =='abc'
+
+
+def without_end(str):
+    return str[1:len(str)-1]
+
+assert without_end('Hello') == 'ell'
+assert without_end('java') == 'av'
+assert without_end('coding') == 'odin'
