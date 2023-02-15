@@ -85,3 +85,29 @@ def without_end(str):
 assert without_end('Hello') == 'ell'
 assert without_end('java') == 'av'
 assert without_end('coding') == 'odin'
+
+
+def combo_string(a, b):
+    x=  len(a)
+    y = len(b)
+    short =""
+    longer = ""
+    if x>y: 
+        short =b 
+        longer = a
+    else: 
+        short = a
+        longer = b
+    return short +longer + short  
+
+assert combo_string('Hello', 'hi') == 'hiHellohi'
+assert combo_string('hi', 'Hello') == 'hiHellohi'
+assert combo_string('aaa', 'b') == 'baaab'
+
+
+def non_start(a, b):
+    return a[1:] + b[1:]
+
+assert non_start('Hello', 'There') == 'ellohere'
+assert non_start('java', 'code') == 'avaode'
+assert non_start('shotl', 'java') == 'hotlava'
