@@ -5,3 +5,44 @@ def first_last6(nums):
 assert first_last6([1, 2, 6]) == True
 assert first_last6([6, 1, 2, 3]) == True
 assert first_last6([13, 6, 1, 2, 3]) == False
+
+
+def common_end(a, b):
+    return a[0] ==b[0] or a[-1]== b[-1]
+
+
+assert common_end([1, 2, 3], [7, 3]) ==True
+assert common_end([1, 2, 3], [7, 3, 2]) == False
+assert common_end([1, 2, 3], [1, 3]) ==True
+
+
+
+def sum3(nums):
+    sum= 0;
+    for i in range (len(nums)): 
+        sum = sum+nums[i]
+    return sum
+
+assert sum3([1, 2, 3]) == 6
+assert sum3([5, 11, 2]) == 18
+assert sum3([7, 0, 0]) == 7
+
+
+def rotate_left3(nums):
+    l= (len(nums)-1)
+    arr = [0,0,0]
+    arr[0]=nums[l] 
+    for i in range (len(nums)):
+        if(i !=0): 
+            arr.append(nums[i])
+            print(arr)
+    arr[nums[l] ] = nums[0]
+    print(arr)
+
+def rotate_right(nums): 
+    x= nums.insert(0, nums.pop())
+    return x
+
+assert rotate_right([1,2,3]) == [3,2,1]
+
+#assert rotate_left3([1,2,3]) == [3,2,1]
