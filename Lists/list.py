@@ -30,19 +30,31 @@ assert sum3([7, 0, 0]) == 7
 
 def rotate_left3(nums):
     l= (len(nums)-1)
-    arr = [0,0,0]
+    arr = [0]
     arr[0]=nums[l] 
     for i in range (len(nums)):
         if(i !=0): 
             arr.append(nums[i])
-            print(arr)
-    arr[nums[l] ] = nums[0]
-    print(arr)
+    arr[nums[l-1] ] = nums[0]
+    return arr
+
 
 def rotate_right(nums): 
-    x= nums.insert(0, nums.pop())
-    return x
+    nums.insert(0, nums.pop())    
+    return nums
 
-assert rotate_right([1,2,3]) == [3,2,1]
+assert rotate_right([1,2,3]) == [3,1,2]
 
-#assert rotate_left3([1,2,3]) == [3,2,1]
+assert rotate_left3([1,2,3]) == [3,2,1]
+
+
+def reverse3(nums):
+    arr = [1,1,1]
+    for i in range (len(nums)): 
+        arr[i] = nums.pop()
+    return arr
+
+assert reverse3([1,2,3]) == [3,2,1]
+assert reverse3([1, 2, 3]) == [3, 2, 1]
+assert reverse3([5, 11, 9]) == [9, 11, 5]
+assert reverse3([7, 0, 0]) ==[0, 0, 7]
