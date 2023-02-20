@@ -58,3 +58,38 @@ assert reverse3([1,2,3]) == [3,2,1]
 assert reverse3([1, 2, 3]) == [3, 2, 1]
 assert reverse3([5, 11, 9]) == [9, 11, 5]
 assert reverse3([7, 0, 0]) ==[0, 0, 7]
+
+
+def max_end3(nums):
+    x= 0
+    if nums[0] > nums[(len(nums)-1)]: 
+        x = nums[0]
+    else:
+        x= nums[(len(nums)-1)]
+
+    for i in range (len(nums)): 
+        nums[i] = x 
+    return nums 
+
+def max_2(nums): 
+    x= max(nums[0], nums[2])
+    for i in range (len(nums)):
+        nums[i] = x; 
+    return nums
+
+assert max_end3([1, 2, 3]) == [3, 3, 3]
+assert max_end3([11, 5, 9]) == [11, 11, 11]
+assert max_end3([2, 11, 3]) ==[3, 3, 3]
+
+
+assert max_2([1, 2, 3]) == [3, 3, 3]
+assert max_2([11, 5, 9]) == [11, 11, 11]
+assert max_2([2, 11, 3]) ==[3, 3, 3]
+
+
+def sum2(nums):
+    return nums[0] + nums[1]
+
+assert sum2([1, 2, 3]) == 3
+assert sum2([1, 1]) == 2
+assert sum2([1, 1, 1, 1]) ==2
