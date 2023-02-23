@@ -51,3 +51,34 @@ assert powerOfB(2,2)==4
 assert powerOfB(2,3)==8
 assert powerOfB(4,2)==16
 assert powerOfB(5,5)==3125
+
+
+def swap(a,b): 
+    temp = a;
+    a=b
+    b=temp 
+    print(a,b)
+    
+def swapRe(a,b):   
+    a,b= b,a
+    print(a,b)
+
+def swap3(a,b):
+    a=a+b
+    b=a-b
+    a=a-b
+    print(a,b)
+
+swap(1,2)
+swapRe(1,2)
+swap3(1,2)
+print('-----')
+swap(4,5)
+swapRe(4,5)
+swap3(4,5)
+print('-----')
+
+swap(6,7)
+swapRe(6,7)
+swap3(6,7)
+print('-----')
