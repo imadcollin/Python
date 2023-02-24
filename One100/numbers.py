@@ -36,3 +36,11 @@ def sumOfList(a):
 assert sumOfList([1,2,3,4]) == 10
 assert sumOfList([1,2,3,4,5]) == 15
 assert sumOfList([4,5]) == 9
+
+def avg(a): 
+    sumOfNum = sum(a)
+    return sumOfNum/(int)(len(a))
+
+assert avg([1,2,3])==2
+assert avg([2,4,6,8])==5
+assert avg({5,5,5,5,5}) ==5
