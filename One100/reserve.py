@@ -30,3 +30,17 @@ def armstrong(a):
 assert armstrong(153) == True
 assert armstrong(370) == True
 assert armstrong(1333) == False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
