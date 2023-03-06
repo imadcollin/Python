@@ -21,4 +21,16 @@ assert palindrome(55544555) ==True
 assert palindrome(22) ==True
 assert palindrome(21) ==False
 assert palindrome(65) ==False
-    
+
+def palind(n): 
+    rev, temp = 0,n
+    while temp !=0: 
+        rev= rev*10 + temp%10
+        temp= temp//10 
+    return rev==n
+
+assert palind(22322) ==True
+assert palind(55544555) ==True
+assert palind(22) ==True
+assert palind(21) ==False
+assert palind(65) ==False
