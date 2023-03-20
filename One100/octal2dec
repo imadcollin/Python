@@ -1,0 +1,21 @@
+def octalToDec(n):
+    if n < 0:
+        return -1
+    if n == 0:
+        return 0
+
+    str = ""
+    sum = 0
+    mul = 1
+    while (n > 0):
+        x = n % 10
+        i = 0
+        oc = x * (pow(8, i)) * mul
+        mul = mul * 10
+        sum = sum + oc
+        print(sum)
+        i = i + 1
+        n = n // 10
+
+
+assert octalToDec(154) == 154
