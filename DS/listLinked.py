@@ -11,8 +11,8 @@ class SlinkedList:
         curNode=self.headval 
         while curNode is not None: 
             print(curNode.dataval)
-            curNode= curNode.nextval
-            
+            curNode= curNode.nextval  
+        
     def insertFront(self, newData):
         newNode = Node(newData)
         newNode.nextval= self.headval
@@ -21,9 +21,32 @@ class SlinkedList:
     def insertEnd(self, newData):
         newNode = Node(newData)
         curNode = self.headval
-        while curNode is not None:
+        if self.headval is None: 
+            self.headval= newNode
+            return
+    
+        while (curNode.nextval):
             curNode = curNode.nextval
         curNode.nextval= newNode
+        
+    def nextToNode(self, node, newData):
+        if node is None:
+            print('Node not exist')
+            return
+        else:
+            newNode= Node(newData)
+            curNode = self.headval
+            temp = curNode
+            while(curNode.nextval):
+                if(curNode.dataval == node):
+                    print('same')
+                
+                    temp = curNode.nextval
+                curNode = curNode.nextval    
+                curNode.nextval = newNode
+                curNode.nextval=temp
+            
+            
 def createLinkedList():
     list1= SlinkedList()
     list1.headval = Node(1) 
@@ -35,15 +58,23 @@ def createLinkedList():
     return list1
 
 ## Print List 
+print('####### Print list ######')
 createLinkedList().printList()
 
 # Insert Front
+print('####### Insert Front ######')
 oldList = createLinkedList()
-newList = oldList.insertFront(0)
-newList.printList()
+oldList.insertFront(0)
+oldList.printList()
 
 # Insert End 
-#oldList2 = createLinkedList()
-#newList2 = oldList2.insertFront(4)
-#newList2.printList()
+print('####### Insert End #####')
+oldList2 = createLinkedList()
+oldList2.insertEnd(4)
+oldList2.printList()
 
+# Insert Next To 
+print('####### Insert Next To #####')
+oldList3 = createLinkedList()
+oldList3.nextToNode(2,11)
+oldList3.printList()
