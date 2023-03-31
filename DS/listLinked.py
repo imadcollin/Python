@@ -35,16 +35,9 @@ class SlinkedList:
             return
         else:
             newNode= Node(newData)
-            curNode = self.headval
-            temp = curNode
-            while(curNode.nextval):
-                if(curNode.dataval == node):
-                    print('same')
-                
-                    temp = curNode.nextval
-                curNode = curNode.nextval    
-                curNode.nextval = newNode
-                curNode.nextval=temp
+            node.nextval = newNode
+            newNode.nextval=node.nextval.nextval
+            #newNode.dataval = node.dataval
             
             
 def createLinkedList():
@@ -76,5 +69,5 @@ oldList2.printList()
 # Insert Next To 
 print('####### Insert Next To #####')
 oldList3 = createLinkedList()
-oldList3.nextToNode(2,11)
+oldList3.nextToNode(oldList3.headval.nextval,11)
 oldList3.printList()
